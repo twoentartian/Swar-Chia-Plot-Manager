@@ -1,5 +1,7 @@
 # Swar's Chia Plot Manager 
 
+This version will not check the free space before kicking off new plotting tasks. For users who mount their disk in NTFS folder on windows, they can avoid the "no more destination directories with enough space for more work".
+
 #### A plot manager for Chia plotting: https://www.chia.net/
 [English](README.md) / [Русский](README.RU.md)
 
