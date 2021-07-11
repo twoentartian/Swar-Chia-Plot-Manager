@@ -52,10 +52,7 @@ def check_valid_destinations(job, drives_free_space):
     for directory in destination_directories:
         drive = identify_drive(file_path=directory, drives=drives)
         logging.info(f'Drive "{drive}" has {drives_free_space[drive]} free space.')
-        if drives_free_space[drive] is None or drives_free_space[drive] >= job_size:
-            valid_destinations.append(directory)
-            continue
-        logging.error(f'Drive "{drive}" does not have enough space. This directory will be skipped.')
+        valid_destinations.append(directory)
 
     if not valid_destinations:
         job.max_plots = 0
